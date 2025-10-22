@@ -1,0 +1,115 @@
+.manuelPage13gemmes{
+    background: url("../images/fond.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.manuelPage13gemmes .gameMod{
+    display: flex
+;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+    width: fit-content;
+
+    position: absolute;
+    left: 23%;
+    top: 7.6%;
+    border-radius: 25px;
+    background: #ffffff85;
+
+    span{
+
+        padding: 5px 32px;
+        text-transform: capitalize;
+    }
+
+    .active{
+        font-weight: bold;
+    }
+}
+.manuelPage13gemmes .modExplication{
+
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    background: #ffffff5e;
+    backdrop-filter: blur(5px);
+    padding: 40px 80px 40px 40px;
+    box-sizing: border-box;
+    height: 69vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.manuelPage13gemmes .modSummary{
+    gap: 9px;
+    display: flex
+;
+    flex-direction: column;
+    position: absolute;
+    left: 74%;
+    top: 19%;
+    z-index: 0;
+
+    span{
+
+        background: #ffffffc2;
+        padding: 10px 18px 10px 34px;
+        box-sizing: border-box;
+        border-radius: 0 25px 25px 0;
+        cursor: pointer;
+    }
+
+    .active{
+        font-weight: bold;
+    }
+}
+
+
+.manuelPage13gemmes span.bottomMentions{
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    top: 93%;
+    letter-spacing: 2px;
+}
+.manuelPage13gemmes button.bottomMentions{
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    top: 93%;
+    letter-spacing: 2px;
+    padding: 12px 15px;
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+    border-radius: 5px;
+}
