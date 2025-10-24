@@ -100,3 +100,7 @@ function manuelPage13gemmesManuelAddEvents(isOwner){
         })
     }
 }
+
+
+//todo : pour l'admin il a une icone pour ouvrir les manuel sinon il est directement sur la config
+// todo : pour les autres ils sont directement sur le jeu mais avec le manuel ouvert

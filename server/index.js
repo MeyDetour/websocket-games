@@ -144,6 +144,8 @@ io.on('connection', (socket) => {
         admins.delete(socket);
         players.delete(socket.id);
         updateAdmins();
+
+        // tODO : si l'admin de la game part le premier joueur apres lui est admin
     });
 
 

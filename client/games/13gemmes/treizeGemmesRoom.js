@@ -7,10 +7,7 @@ async function join13gemmesGame() {
     tourSocketController13gemmes()
     try {
         const roomData = await getRoomData();
-
-       if (roomData.config.tour ===-1) {
-           manuelPage13gemmesManuelPage(globalSocket.id === roomData.creator)
-       }
+        controller13GemmesGamePage(roomData)
     } catch (err) {
         console.error(err);
     }
