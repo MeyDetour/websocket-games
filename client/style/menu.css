@@ -1,0 +1,34 @@
+
+.menu {
+
+    flex-wrap: wrap;
+}
+.error{
+    color: red;
+}
+
+.menu > button {
+    width: 150px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+.menu > button > img {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.menu > button > span {
+
+    width: 100%;
+    box-sizing: border-box;
+    color: white;
+    padding: 10px 0px;
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+}

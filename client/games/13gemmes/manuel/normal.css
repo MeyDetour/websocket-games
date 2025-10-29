@@ -1,0 +1,41 @@
+.normal.manuelPage13gemmes {
+
+    font-size: 21px;
+
+    h2 {
+        font-weight: bold;
+    }
+
+    .materiel-roi, .materiel-jeton-blason, .materiel-jeton-sword, .materiel-jeton-garde ,     .materiel-gem  {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 25px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        img {
+            width: 43%;
+        }
+    }
+    .materiel-jeton-blason, .materiel-jeton-sword, .materiel-jeton-garde{
+     margin-block: 50px;
+        img {
+            width: 30%;
+        }
+    }
+
+    .materiel-gem {
+        margin-block: 75px;
+        img{
+            width: 15%;
+        }
+    }
+
+
+}

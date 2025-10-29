@@ -1,0 +1,173 @@
+.game13gemmes {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+
+    .top {
+        background: url("../images/fond.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 75vh;
+        position: relative;
+        z-index: 0;
+
+
+        .icon {
+            z-index: 10;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+
+            button {
+
+                pointer-events: auto;
+                cursor: pointer;
+                background: transparent;
+                border: 0;
+                img{
+
+                    width: 73px;
+                    height: 73px;
+                    object-fit: contain;
+                }
+            }
+        }
+
+
+    }
+
+    .waiting.top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+
+        .right {
+            height: 70%;
+            width: 50%;
+            background: #ffffffa6;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .links{
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                gap: 25px;
+                align-items: start;
+
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    align-self: start;
+                    gap: 10px;
+                    p{
+                        margin: 0;
+                    }
+                    p.toCopy{
+                        background: #fff8f8a3;
+                        padding: 9px;
+                        border-radius: 5px;
+                    }
+                }
+
+            }
+        }
+
+        .left {
+            width: 30%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .players {
+
+                background: #ffffffa6;
+                padding: 20px;
+                box-sizing: border-box;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                height: 40%;
+
+                .players-wrap {
+
+                    box-sizing: border-box;
+
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 15px;
+                }
+            }
+
+            .chat {
+
+                background: #ffffffa6;
+                padding: 20px;
+                box-sizing: border-box;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: column;
+                overflow-y: auto;
+                height: 52%;
+            }
+        }
+
+
+    }
+
+    .bottom {
+        background: url(../images/fond2.3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        margin-top: -15px;
+        width: 100%;
+        height: calc(25vh + 15px);
+        z-index: 2;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 20px;
+        justify-content: center;
+
+        .card-wrapper{
+
+
+            display: flex
+        ;
+            flex-direction: row;
+            gap: 25px;
+            height: 84%;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+
+            > .card{
+                height: 100%;
+                position: relative;
+                .cardImage{
+                    height: 100%;
+                }
+                .cardHeader{
+                    position: absolute;
+
+                }
+            }
+        }
+    }
+
+
+}
+
