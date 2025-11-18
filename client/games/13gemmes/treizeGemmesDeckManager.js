@@ -35,23 +35,40 @@ function get13GemmesDeckSize(nbPlayers, roomData) {
     return nbPlayers * 2 * roomData.config.maxCardInHand;
 }
 
-function get13GemmesCardInDeck(deck) {
-   let lastCard =  {
+async function reset13GemmesDeck() {
+    const roomData = await getRoomData();
+    let newDeck = roomData.gameDetails.discard + roomData.gameDetails.deck
+    roomData.gameDetails.discard = []
+    roomData.gameDetails.deck = newDeck
+    changeIn13GemmesGameDetails(roomData.gameDetails)
+}
+
+async function get13GemmesCardInDeck(deck) {
+    let deckToDiscard = [...deck]
+
+    if (deckToDiscard.lenght === 0) {
+        await reset13GemmesDeck()
+        await getRoomData()
+    }
+
+    let lastCard = {
         "cardHeader": deck[0].cardHeader,
         "cardImage": deck[0].cardImage,
         "showed": false,
     }
     deck.splice(0, 0)
-    return {deck,lastCard}
+    return {deck, lastCard}
+
+
 }
 
 function distribute13GemmesDeck(deck, roomData) {
     let playerDeck = {}
     let newDeck = deck
     for (let player of roomData.players) {
-        playerDeck[player.id] = {"cards":[],"knight":0,"sword":0,"blazon":0};
+        playerDeck[player.id] = {"cards": [], "knight": 0, "sword": 0, "blazon": 0};
         for (let cardIndex = 0; cardIndex < roomData.config.maxCardInHand; cardIndex++) {
-            let {deckEdited,lastCard}=get13GemmesCardInDeck(newDeck)
+            let {deckEdited, lastCard} = get13GemmesCardInDeck(newDeck)
             playerDeck[player.id]["cards"].push(lastCard)
             newDeck = deckEdited
         }

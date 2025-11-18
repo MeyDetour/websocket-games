@@ -57,11 +57,11 @@ async function start13gemmesGame(roomData) {
         lastCard
     }
     roomData.gameDetails.deck = deckEdited
-    in13GemmesChangeGameDetails(roomData.gameDetails)
+    changeIn13GemmesGameDetails(roomData.gameDetails)
 }
 
 
-function in13GemmesChangeGameDetails(gameDetails){
+function changeIn13GemmesGameDetails(gameDetails){
     console.log("send data to server ", gameDetails)
     globalSocket.emit("changeGameDetails", gameDetails)
 }
